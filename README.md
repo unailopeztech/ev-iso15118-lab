@@ -10,14 +10,13 @@ This repository documents my hands-on study of the full protocol stack using EVe
 
 ## Stack Overview
 
-CSMS (backend)
-↕ OCPP 2.0.1 (WebSocket)
-EVSE (charger)
-↕ ISO 15118-2 / ISO 15118-20 (TCP/TLS over IPv6)
-EV (vehicle)
-↕ SLAC (PLC signaling over CCS cable)
-CCS Cable
-
+    CSMS (backend)
+            | OCPP 2.0.1 (WebSocket)
+        EVSE (charger)
+            | ISO 15118-2 / ISO 15118-20 (TCP/TLS over IPv6)
+        EV (vehicle)
+            | SLAC (PLC signaling over CCS cable)
+        CCS Cable
 
 ## Environment
 
