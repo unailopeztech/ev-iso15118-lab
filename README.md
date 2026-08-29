@@ -79,15 +79,27 @@ EVerest uses a modular architecture where each component communicates via MQTT:
 
 ## Results
 
-Successfully compiled and ran EVerest SIL simulation with ISO 15118 DC IsoMux configuration:
+## Results
+
+Successfully compiled and ran EVerest SIL simulation with ISO 15118-20 DC IsoMux configuration on native Ubuntu 24.04:
+
+![EVerest ISO 15118-20 DC Charging Session](EVerestUI.jpeg)
 
 - SLAC matching completed
-- EIM authorization flow completed
-- ISO 15118-2 and ISO 15118-20 modules initialized and communicating via MQTT
+- EIM authorization flow completed  
+- ISO 15118-20 full session completed:
+  - SDP handshake over IPv6 link-local (fe80::)
+  - SupportedAppProtocol negotiation — ISO 15118-20 DC selected
+  - SessionSetup, AuthorizationSetup, Authorization
+  - ServiceDiscovery, ServiceDetail, ServiceSelection — DC Dynamic mode
+  - DcChargeParameterDiscovery — 300A/900V/150kW negotiated
+  - ScheduleExchange — Dynamic control mode agreed
+  - DcCableCheck — isolation verified at 900V
+  - DCChargeLoop active — 22.1 kW charging confirmed
 - Full MQTT message inspection via MQTT Explorer
-- ISO 15118-2 state machine studied from source code (Josev)
+- ISO 15118-2 and ISO 15118-20 state machines studied from Josev source code
 
-**Limitation:** SDP handshake fails in WSL2 due to missing IPv6 link-local address on loopback interface. Full session requires native Linux.
+**Note:** WSL2 blocks IPv6 link-local addresses required for SDP. Native Linux is required for a complete ISO 15118 session.
 
 ## Next Steps
 
