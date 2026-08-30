@@ -107,7 +107,7 @@ Successfully compiled and ran EVerest SIL simulation with ISO 15118-20 DC IsoMux
 - [ ] Capture and analyze complete session logs
 - [ ] Test V2G scenario with negative current (DC_BPT)
 - [ ] Study ISO 15118-20 ScheduleExchange dynamic mode
-- [ ] Contribute to EVerest open source
+- [x] Contribute to EVerest open source — [Issue #2688: ISO 15118 SDP fails on WSL2](https://github.com/EVerest/EVerest/issues/2688)
 
 ## References
 
