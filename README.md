@@ -17,6 +17,18 @@ This repository documents my hands-on study of the full protocol stack using EVe
         EV (vehicle)
             | SLAC (PLC signaling over CCS cable)
         CCS Cable
+        
+## Documentation
+
+Detailed technical documentation in the `docs/` folder:
+
+- [Architecture Overview](docs/architecture.md) — EVerest module architecture and MQTT communication
+- [Manager Lifecycle](docs/manager-lifecycle.md) — How the EVerest manager starts and supervises modules
+- [Interfaces](docs/interfaces.md) — How modules communicate via YAML contracts
+- [ISO 15118-2 DC State Machine](docs/iso15118-2.md) — Full DC charging sequence from SDP to SessionStop
+- [ISO 15118-20](docs/iso15118-20.md) — V2G, ScheduleExchange Dynamic mode, and differences from ISO 15118-2
+- [Charger State Machine](docs/charger-state-machine.md) — EvseManager C++ state machine and double safety check
+- [OCPP 2.0.1 Integration](docs/ocpp201-integration.md) — How OCPP connects to ISO 15118 and the CSMS
 
 ## Environment
 
